@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 300;
+    font-size: 0.875rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+}
+
+/* default colors */
+:root {
+    --elements-color: hsl(0, 0%, 100%);
+    --background-color: hsl(0, 0%, 90%);
+    ;
+    --text-color: hsl(200, 15%, 8%);
+    --input-color: hsl(0, 0%, 52%);
+    --box-shadow: rgba(100, 100, 111, 0.938) 0px 7px 29px 0px;
+}
+
+.dark-mode {
+    --elements-color: hsl(209, 23%, 22%);
+    --background-color: hsl(207, 26%, 17%);
+    --text-color: hsl(0, 0%, 100%);
+    --input-color: hsl(0, 0%, 100%);
+    --box-shadow: rgba(221, 221, 235, 0.384) 0px 7px 29px 0px;
+}
+
+
+.nav {
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.938) 0px 7px 29px 0px;
+    padding: 0 6rem;
+    /* background-color: var(--elements-color); */
+}
+
+.text>h1 {
+    font-weight: 800;
+}
+
+section {
+    padding: 3rem 17%;
+    width: 100%;
+    height: calc(100% - 8%);
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
+.mode-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mode-box>p {
+    font-weight: 700;
+}
+
+.options {
+    /* border: solid; */
+    display: flex;
+    height: 7%;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.input-area {
+    display: flex;
+    height: 88%;
+    width: 38%;
+    border-radius: 9px;
+    border: transparent 2px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    color: var(--input-color);
+    background-color: var(--background-color);
+
+}
+
+.search-icon {
+    width: 4rem;
+    border: none;
+    /* background-color: var(--elements-color); */
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    color: var(--input-color);
+    background-color: var(--background-color);
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: var(--input-color);
+}
+
+.drop-down-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+    background-color: var(--elements-color);
+    border-radius: 9px;
+    border: transparent 2px;
+    padding: 0 2rem;
+    position: relative;
+    font-weight: 600;
+    font-size: 1rem;
+
+    box-shadow: var(--box-shadow)
+}
+
+.drop-down-menu>p {
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+
+
+.drop-down-content {
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+    gap: 6px;
+    background-color: var(--elements-color);
+    border-radius: 9px;
+    border: transparent 2px;
+
+}
+
+.drop-down-content>i {
+    font-style: normal;
+    font-size: 1rem;
+    cursor: pointer;
+
+}
+
+.drop-down-content>i :hover {
+    cursor: crosshair;
+
+}
+
+.hidden {
+    display: none;
+}
+
+main {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
+    /* Dynamic columns */
+    column-gap: 4rem;
+    row-gap: 5rem;
+    width: 100%;
+
+}
+
+.small {
+    width: 100%;
+    height: 34vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: var(--elements-color);
+    cursor: pointer;
+
+}
+
+.flag-img-style {
+    height: 56%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.country-description-style {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 1rem 1rem;
+    font-size: 1.2rem;
+}
+
+
+
+.country-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+
+
+/* Country page styles   */
+
+
+.country-page-main-box {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    color: var(--text-color);
+    padding: 2rem 10vw;
+    background-color: var(--background-color);
+}
+
+.back-box {
+    /* border: solid; */
+    /* border: solid; */
+    width: 7vw;
+    height: 5.5vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.8rem;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    background-color: var(--elements-color);
+    cursor: pointer;
+}
+
+.back-btn {
+    border: none;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    background-color: var(--elements-color);
+    cursor: pointer;
+}
+
+.detail-box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* border: solid; */
+    height: 44vh;
+    gap: 3rem;
+    align-items: center;
+    padding: 2rem 0;
+    color: var(--text-color);
+    /* background-color: var(--elements-color); */
+}
+
+.flag-box {
+    height: 100%;
+    display: flex;
+    width: 35%;
+}
+
+.description-box {
+
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center;
+}
+
+.details {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.common {
+    display: flex;
+    width: 100%;
+    font-size: 1.3rem;
+    gap: 1rem;
+}
+
+.big-flag {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+
+/* media queries  */
+
+@media (max-width: 600px) {
+
+
+    .options {
+        height: 20%;
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+    }
+
+    .input-area {
+        width: 100%;
+    }
+
+    .drop-down-menu {
+        width: 52%;
+        font-size: 0.6rem;
+    }
+
+    .nav {
+        padding: 0 1rem;
+    }
+
+    .country-page-main-box {
+        padding: 2rem 2rem;
+        height: calc(100% - 8%);
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    .back-box{
+        width: 25vw;
+        font-size: 1rem;
+        height: 5%;
+    
+    }
+    .detail-box{
+        flex-direction: column;
+        height: 90%;
+        gap: 1rem;
+    }
+    .flag-box{
+        height: 40%;
+        width: 90%;
+    }
+   .common{
+    font-size: 1rem;
+   }
+   .description-box{
+    flex-direction: column;
+    align-items: start;
+    width: 90%;
+   }
+
+}
+
+
+@media (min-width: 601px) and (max-width: 769px) {
+    .input-area {
+        width: 60%;
+    }
+
+    .drop-down-menu {
+        width: 35%;
+        font-size: 0.6rem;
+    }
+
+    main {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    section {
+        padding: 2rem 10%;
+    }
+
+    /* country page styles */
+    .country-page-main-box {
+        padding: 2rem 2rem;
+        height: calc(100% - 8%);
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    .back-box{
+        width: 25vw;
+        font-size: 1rem;
+        height: 5%;
+    
+    }
+    .detail-box{
+        flex-direction: column;
+        height: 90%;
+        gap: 1rem;
+    }
+    .flag-box{
+        height: 40%;
+        width: 90%;
+    }
+   .common{
+    font-size: 1rem;
+   }
+   .description-box{
+    flex-direction: column;
+    align-items: start;
+    width: 90%;
+   }
+
+}
+
+@media (min-width: 769px) and (max-width: 1300px) {
+    main {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        column-gap: 1.5rem;
+        row-gap: 3rem;
+    }
+
+    section {
+        padding: 2rem 13%;
+    }
+
+    .drop-down-menu {
+        width: 35%;
+        font-size: 0.6rem;
+    }
+
+    .input-area {
+        width: 60%;
+    }
+
+
+    /* country page styles  */
+
+    .country-page-main-box {
+        padding: 2rem 2rem;
+        height: calc(100% - 8%);
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    .back-box{
+        width: 25vw;
+        font-size: 1rem;
+        height: 5%;
+    
+    }
+    .detail-box{
+        flex-direction: column;
+        height: 90%;
+        gap: 1rem;
+    }
+    .flag-box{
+        height: 40%;
+        width: 90%;
+    }
+   .common{
+    font-size: 1rem;
+   }
+   .description-box{
+    flex-direction: column;
+    align-items: start;
+    width: 90%;
+   }
+
+}
+
+
+/* Need to add hover effect */
